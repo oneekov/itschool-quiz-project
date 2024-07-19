@@ -1,0 +1,70 @@
+<!-- Оставь надежду, всяк сюда входящий. Фронтэнд - не моё -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/static/quiz.js"></script>
+        <link rel="stylesheet" href="/static/styles.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+        <link rel="manifest" href="/static/site.webmanifest">
+    </head>
+    <body style="background: #60449B;" class="quiz-bg">
+        <div class="enterdiv">
+            <img src="/static/alglogo.svg" alt="" class="logo">
+            <p class="quizname"></p>
+            <hr align="left" width="250" size="12" color="#FECA43" class="lines"/>
+            <hr align="left" width="200" size="12" color="#ffffff" class="lines" id="smallline"/>
+            <hr align="left" width="200" size="12" color="#ffffff" class="lines" id="smallline"/>
+            <button class="enterButton" align="center" onclick="fromStartToQuiz()">Начать</button>
+        </div>
+        <div class="quizdiv hide">
+            <div class="navbar">
+                <img src="/static/algminilogo.png" class="minilogo">
+                <p class="quizmininame"></p>
+                <img src="/static/menuicon.svg" class="menuicon" onclick="toggleQC()">
+            </div>
+            <div class="questionchoose">
+                <div class="changeQuestion1">
+                    <p onclick="changeQuestion(this)" class="aa">1</p><p onclick="changeQuestion(this)" class="aa">2</p><p onclick="changeQuestion(this)" class="aa">3</p>
+                </div>
+                <div class="changeQuestion2">
+                    <p onclick="changeQuestion(this)" class="aa">4</p><p onclick="changeQuestion(this)" class="aa">5</p>
+                </div>
+            </div>
+            <div class="qadiv">
+                <div class="idkc">
+                <p class="questionnumber">Вопрос №1 из 5</p>
+                <p class="questiontimer">00:00</p>
+                </div>
+                <p class="questiontext">ГОЙДА</p>
+                <div class="row1"><label><input type="radio" name="radiobox" value="1"></label>
+                <label><input type="radio" name="radiobox" value="2"></label></div>
+                <div class="row2"><label><input type="radio" name="radiobox" value="3"></label>
+                <label><input type="radio" name="radiobox" value="4"></label></div>
+                <div class="qabuttons">
+                    <img src="/static/hint.svg" class="hinticon" onclick="showHint()">
+                    <button class="checkAnswer" onclick="checkAnswer()">Проверить ответ</button>
+                </div>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="popupwindow">
+                <p class="popuptext">Какой-то текст, который будет выведен пользователю</p>
+                <button class="popupbutton" onclick="closePopup()">ОК</button>
+            </div>
+        </div>
+        <div class="enddiv">
+            <img src="/static/semicircle.png" class="semicircle1 scbase">
+            <img src="/static/semicircle.png" class="semicircle2 scbase">
+            <img src="/static/semicircle.png" class="semicircle3 scbase">
+            <img src="/static/semicircle.png" class="semicircle4 scbase">
+            <div class="endbase">
+                <p class="endtext1 endtext">Старайся лучше!</p>
+                <img class="endlogo">
+                <p class="endtext2 endtext">Твой результат:<br><b>1/5</b></p>
+            </div>
+        </div> 
+    </body>
+</html>
