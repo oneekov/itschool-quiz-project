@@ -1,0 +1,506 @@
+/*Colors: #FECA43 - yellow
+#60449B - purple
+#2B2235 - black*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.index {
+    font-family: Montserrat;
+    text-align: center;
+}
+
+.enterdiv, .quizdiv, .popup, .enddiv {
+    width: 100%;
+    height: 100%;
+    border: 1 solid;
+    overflow: hidden;
+    position: absolute;
+}
+
+.hide {
+    transition: 0.4s all;
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.quiz-bg {
+    width: 100vw;
+    height: 100vh;
+    background: #7157A9;
+    /* background: linear-gradient(160deg, rgb(110, 200, 250) 0%, rgba(249,227,113,1) 100%);   */
+    background-size: 100%;
+}
+
+.logo {
+    display: block;
+    fill: #602b7a;
+	margin: 3% 0 0 3%;
+    min-width: 420px;
+	width: 30%;
+}
+
+.quizname {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 8vh;
+    font-weight: 600;
+    width: 70%;
+    margin: 5% 0 5% 3%;
+}
+
+.lines {
+    margin-left: 3%;
+}
+
+/* я сам не понял, как оно разрослось до таких объёмов*/
+.enterButton {
+    font-family: Montserrat;
+    background-color: #FECA43;
+    font-weight: 500;
+    border: none;
+    color: #2B2235;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    border-radius: 24px;
+    position: absolute; 
+    left: 0; 
+    bottom: 8%;
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 160px;
+}
+
+.navbar {
+    background-color: #60449B;
+    box-shadow: 0px 2px 5px 0px #111;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-flow: 1;
+}
+
+.minilogo {
+    width: 4vw;
+    height: 5vw;
+    padding: 0.5%;
+    margin: 5px 0 0 15px;
+}
+
+.quizmininame {
+    font-family: Montserrat;
+    font-weight: 500;
+    color: #fff;
+    width: 72%;
+    font-size: 1.5vw;
+    /* margin-left: 3%; */
+    margin: auto 0 auto 2%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.menuicon {
+    display: block;
+    width: 2.5vw;
+    height: 2.5vw;
+    position: absolute;
+    margin: auto 0;
+    right: 1%;
+    flex-grow: 1;
+    padding: 0.8vw;
+}
+
+.qadiv {
+    border: 12px solid #FFFFFF;
+    background-color: #FECA43;
+    /* border-radius: 10px; */
+    width: 80%;
+    max-width: 800px;
+    height: 65%;
+    margin: 4% auto;
+}
+
+.questiontext {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.5vw;
+    padding: 0vw 1.3vw 0 1.3vw;
+}
+
+.questionnumber {
+    font-family: Montserrat;
+    font-size: 1vw;
+    /* position: absolute;  */
+    margin: 1.3vw 1.3vw 0 1.3vw;
+    font-weight: 500;
+}
+
+.questiontimer {    
+    font-family: Montserrat;
+    font-size: 1vw;
+    /* position: absolute;  */
+    margin: 1.3vw 1.3vw 0 1.3vw;
+    font-weight: 500;
+    /* float: right;
+    width: 70%; */
+}
+
+.idkc {
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 1vw;
+    height: 1vw;
+  
+    border: 2px solid #999;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+  
+    position: relative;
+}
+
+.inputmobile {
+    width: 4vw;
+    height: 4vw;
+}
+
+.inputmobile:checked {
+    border: 1.2vw solid #fff;
+}
+
+input:checked {
+    border: 0.4vw solid #fff;
+}
+
+.right {
+    width: 30%;
+    float: right;
+    position: absolute;
+    right: 0 2vw;
+}
+
+label {
+    color: #FFF;
+    word-wrap: break-word;
+    width: 40%;
+    display: block;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 1.3vw;
+    margin: 1.5vw;
+    background-color: #60449B;
+    border-radius: 0.7vw;
+    padding: 0.6vw;
+    transition: background-color 0.4s;
+}
+
+.labelmobile {
+    /* width: 70%; */
+    border-radius: 3vw;
+    padding: 2.5vw;
+    /* margin: 6vw; */
+    font-size: 3.7vw;
+}
+
+
+label:hover {
+    background-color: #4c357e;
+}
+
+.row1, .row2 {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    /* padding: 1vw; */
+    padding: 0 1vw;
+    transition: background-color 0.4s;
+}
+
+.questionchoose {
+    transition: all 0.2s;
+    box-shadow: 0px 0.4vw 0.5vw 0px rgba(0,0,0,0.7);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    position: absolute;
+    font-family: Montserrat;
+    background-color: #FFF;
+    width: 20vw;
+    right: 0px;
+    border-radius: 0 0 0.5vw 0.5vw;
+}
+
+.showanim {   opacity: 1;
+    visibility: visible;
+    z-index: 1; }
+
+.changeQuestion1, .changeQuestion2 {
+    display: flex;
+    justify-content: space-evenly;
+    /* padding: 1vw; */
+}
+
+.aa {
+    font-size: 2vw;
+    font-weight: 500;
+    background-color: #FECA43;
+    padding: 0.5vw;
+    width: 2.4vw;
+    border-radius: 111111px;
+    text-align: center;
+}
+
+.qabuttons {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    margin-bottom: 0px;
+    height: 10vh;
+}
+
+.checkAnswer:hover {
+    background-color: #4c357e;
+}
+
+.checkAnswer {
+    /* position: relative;
+    margin-right: 3vw;
+    margin-left: auto;
+    margin-top: 1vw; */
+    display: block;
+    font-family: Montserrat;
+    font-size: 1.5vw;
+    background-color: #60449B;
+    padding: 1vw;
+    border-radius: 1vw;
+    color: #fff;
+    font-weight: 600;
+    border-color: #ffffff00;
+    transition: background-color 0.4s;
+}
+
+.camobile {
+    font-size: 4.5vw;
+    padding: 3vw;
+    border-radius: 4vw;
+}
+
+.hinticon {
+    /* width: 5vw; */
+    height: 10vh;
+    background-color: #60449B;
+    border-radius: 1vw;
+    transition: background-color 0.4s;
+}
+
+.hinticon:hover {
+    background-color: #4c357e;
+}
+
+.hintmobile {
+    height: 10vh;
+    border-radius: 4vw;
+}
+
+.popup {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    position: absolute;
+    background: #00000088;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+    /* transition: all 0.4s; */
+    /* display: none; */
+}
+
+.popupwindow {
+    background-color: #FFF;
+    width: 40vw;
+    /* height: 35vh; */
+    margin: auto;
+    border-radius: 1vw;
+    padding: 1vw;
+    text-align:center;
+}
+
+.popupmobile {
+    width: 80vw;
+    /* height: 40vh; */
+    border-radius: 4vw;
+    padding: 5vw;
+}
+
+.popuptext {
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 4vh;
+}
+
+.popuppmob {
+    font-size: 3vh;
+}
+
+.popupbutton {
+    text-align: center;
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 3.5vh;
+    background-color: #FECA43;
+    color: #000;
+    border-radius: 1vw;
+    padding: 0.5vw 1.5vw;
+    margin: 0 0 2vw 0;
+    transition: background-color 0.4s;
+    border: none;
+    bottom: 0;
+    display: inline-block;
+    align-self: flex-end;
+}
+
+.popupbutton:hover {
+    background-color: #ba922e;
+}
+
+.popupbuttonmobile {
+    border-radius: 4vw;
+    padding: 2vw 6vw;
+}
+
+.popupshow {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+.qcmobile {
+    /* width: 60vw; */
+    font-size: 6vw;
+    padding: 1.5vw;
+    width: 7.2vw;
+    /* border-radius: 4vw; */
+}
+
+.qqcmob {
+    width: 60vw;
+    border-radius: 0 0 1.5vw 1.5vw;
+}
+
+.enddiv {
+    display: none;
+    overflow: hidden;
+    position: relative;
+}
+
+.endshow {
+    display: block;
+}
+
+.scbase {
+    position: absolute;
+    display: block;
+    pointer-events:none;
+    filter: blur(0.7vw);
+    overflow: hidden;
+    width: 29vw;
+    height: 37vw;
+}
+
+.semicircle1 {
+    transform: rotate(170deg);
+    left: -12vw;
+    top: -4vw;
+}
+
+.semicircle2 {
+    transform: rotate(230deg);
+    /* left: -12vw; */
+    top: -15vw;
+}
+
+.semicircle3 {
+    transform: rotate(350deg);
+    right: -12vw;
+    bottom: -4vw;
+}
+
+.semicircle4 {
+    transform: rotate(50deg);
+    right: 0;
+    bottom: -16vw;
+}
+
+.scmob {
+    width: 58vw;
+    height: 74vw;
+}
+
+.sc1 { left: -20vw; }
+.sc2 { top: -27vw; }
+.sc3 { right: -20vw; }
+.sc4 { bottom: -28vw; }
+
+.endbase {
+    width: 60%;
+    height: 60%;
+    margin: auto;
+    font-family: Montserrat;
+    font-size: 4vw;
+    color: #fff;
+    text-align: center;
+    display: grid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.endbasemob {
+    font-size: 8vw;
+}
+
+.endtext {
+    margin:auto;
+}
+
+.endtext1 {
+    font-weight: 700;
+}
+
+.endlogo {
+    width: 10vw;
+    height: 10vw;
+    margin: auto;
+}
+
+.endlogomob {
+    width: 35vw;
+    height: 35vw;
+}
